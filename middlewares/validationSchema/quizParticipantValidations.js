@@ -1,17 +1,17 @@
 const Joi = require('joi');
 
-const signUpUserValidationSchema = Joi.object({
+const startQuizById = Joi.object({
     password : Joi.string().required(),
     email: Joi.string().email().required(),
     name : Joi.string().required()
 })
 
-const signInUserValidationSchema = Joi.object({
+const submitQuizById = Joi.object({
     password : Joi.string().required(),
     email : Joi.string().email().required()
 })
 
 module.exports = {
-    signUpUserValidationSchema,
-    signInUserValidationSchema
+   startQuizById,
+   submitQuizById
 }

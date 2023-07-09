@@ -1,20 +1,14 @@
 const mongoose = require('mongoose');
+const User = require('../models/userModel');
+const Quiz = require('../models/quizModel');
 
 const quizParticipantSchema = new mongoose.Schema({
-    quizId : {type : mongoose.Schema.Types.ObjectId,required : true},
-    participantAnswers : [{
-        questionId : { type : mongoose.Schema.Types.ObjectId},
-        selectedOptions : {
-            questionId : {type : mongoose.Schema.Types.ObjectId},
-            selectedOption : [{
-               optionId : {type : mongoose.Schema.Types.ObjectId}
-            }]
-        }
-    }],
-    quizScore : {type : Number, default : 0},
-    isSubmitted : {type : Boolean, default : false},
-    attemptTime : {type : Date},
-    completionTime : {type : Date}
+    participantId : {type : mongoose.Schema.Types.ObjectId,ref : User},
+    quizId : {type : mongoose.Schema.Types.ObjectId,ref : Quiz},
+    quizScore : {type : Number},
+    startTime : {type : Date},
+    completionTime : {type : Date},
+    quizCompleted : {type : Boolean,default : false}
 })
 
 const quizParticipantModel = mongoose.model('quizParticipants',quizParticipantSchema);
