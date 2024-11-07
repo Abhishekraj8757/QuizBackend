@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "e1cc4989-2cdc-4aa8-9216-a05be0ffe04e",
+		"name": "CUE-531700Withenvironemtn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"id": "cc862d7d-5a94-405c-8a08-b7caebed78f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://cat-fact.herokuapp.com/facts"
+			},
+			"response": []
+		}
+	]
+}
