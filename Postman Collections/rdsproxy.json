@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "8a813688-c58c-46e5-bb81-75ac0208463f",
+		"name": "rdsproxydeletion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b398dd16-dc69-4ac7-ac04-ec787c1caa5e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "a784d0d1-d65a-48f8-8078-700842b14943",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "www.google.com"
+			},
+			"response": []
+		}
+	]
+}
